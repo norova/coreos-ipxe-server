@@ -35,8 +35,8 @@ EOF
 done
 
 # BUILD DOCKER
-docker build -t norova/coreos-ipxe-server .
+docker build -t coreos-ipxe-server .
 
 # RUN DOCKER
-docker run -d -p 4777:4777 -e "COREOS_IPXE_SERVER_BASE_URL=${COREOS_IPXE_SERVER_BASE_URL}" -e "COREOS_IPXE_SERVER_LISTEN_ADDR=${COREOS_IPXE_SERVER_LISTEN_ADDR}" --name ipxe norova/coreos-ipxe-server
+docker run -d -p 4777:4777 -e "COREOS_IPXE_SERVER_BASE_URL=${COREOS_IPXE_SERVER_BASE_URL}" -e "COREOS_IPXE_SERVER_LISTEN_ADDR=${COREOS_IPXE_SERVER_LISTEN_ADDR}" --name ipxe coreos-ipxe-server
 
